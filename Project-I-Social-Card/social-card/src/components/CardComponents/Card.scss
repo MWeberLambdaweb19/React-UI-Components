@@ -1,0 +1,26 @@
+/* All styles for your Card Components live here */
+.banner{
+    width: 745px;
+    display: flex;
+    align-self: flex-end;
+    border-top-left-radius: 2.5%;
+    border-top-right-radius: 2.5%;
+}
+.cardcontent{
+    padding: 15px;
+    border-left: 0.5px solid lightgrey;
+    border-right: 0.5px solid lightgrey;
+    border-bottom: 0.5px solid lightgrey;
+    h3 {
+        color: black;
+        font-weight: 525;
+        margin-bottom: 10px;
+    }
+    p {
+        color: black;
+    }
+    .link {
+        margin-top: 10px;
+        color: grey;
+    }
+}
