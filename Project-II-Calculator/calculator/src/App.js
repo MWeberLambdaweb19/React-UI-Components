@@ -3,7 +3,7 @@ import './App.scss';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay.js'
 import NumberButton from './components/ButtonComponents/NumberButton.js'
 import ActionButton from './components/ButtonComponents/ActionButton.js'
-
+// Junk code for pull request
 class App extends React.Component {
   constructor () {
     super();
