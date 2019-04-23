@@ -4,33 +4,59 @@ import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay.
 import NumberButton from './components/ButtonComponents/NumberButton.js'
 import ActionButton from './components/ButtonComponents/ActionButton.js'
 
+class App extends React.Component {
+  constructor () {
+    super();
+    this.state = {
+      result: ""
+    };
+  }
 
-const App = () => {
-  return (
-    <div className="container">
-    <div className="calculator-display">
-      <CalculatorDisplay />
-    </div>  
-    <div className="calculator-operation"> 
-      <NumberButton />
-      <ActionButton />
-    </div> 
-    </div>
-    // <div>
-    //   <h3>Welcome to React Calculator</h3>
-    //   <p>
-    //     We have given you a starter project. You'll want to build out your
-    //     components in their respective files, remove this code and replace it
-    //     with the proper components.
-    //   </p>
-    //   <p>
-    //     <strong>
-    //       Don't forget to `default export` your components and import them here
-    //       inside of this file in order to make them work.
-    //     </strong>
-    //   </p>
-    // </div>
-  );
-};
+  onClick = button => {
+    if (button === "="){
+      this.calculate()
+    }
+    else if (button === "clear"){
+      this.reset()
+    }
+    else {
+      this.setState({
+        result: this.state.result + button
+      })
+    }
+  }
+
+  calculate = () => {
+    try {
+      this.setState({
+        result: (eval(this.state.result) || "" ) + ""
+        })
+    } catch (e) {
+      this.setState({
+        result: "error"
+      })
+    }
+  }
+
+  reset = () => {
+    this.setState({
+      result: ""
+    })
+  }
+
+  render () { 
+    return (
+      <div className="container">
+        <div className="calculator-display">
+          <CalculatorDisplay result={this.state.result} />
+        </div>  
+        <div className="calculator-operation"> 
+          <NumberButton onClick={this.onClick}/>
+          <ActionButton onClick={this.onClick}/>
+        </div> 
+      </div>
+    );
+  };
+}
 
 export default App;

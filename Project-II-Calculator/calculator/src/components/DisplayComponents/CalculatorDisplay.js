@@ -1,12 +1,15 @@
-import React from 'react';
 import './Display.scss';
+import React, {Component} from 'react';
 
-function CalculatorDisplay () {
-    return (
-        <div className="display">
-        <p>0</p>
-        </div>
-    )
+class CalculatorDisplay extends Component {
+ 
+    render() {
+        const {result} = this.props;
+        return (
+            <div className="display">
+            <p>{result}</p>
+            </div>
+        )
+    };
 };
-
 export default CalculatorDisplay;
