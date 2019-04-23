@@ -8,8 +8,10 @@ import ActionButton from './components/ButtonComponents/ActionButton.js'
 const App = () => {
   return (
     <div className="container">
-    <div className="calculator-operation">
+    <div className="calculator-display">
       <CalculatorDisplay />
+    </div>  
+    <div className="calculator-operation"> 
       <NumberButton />
       <ActionButton />
     </div> 

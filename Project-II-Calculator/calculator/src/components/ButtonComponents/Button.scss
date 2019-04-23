@@ -2,6 +2,29 @@
         display: flex;
         flex-flow: column;
         button {
-            background: red;
+            width: 40px;
+            height: 40px;
+            background: rgb(204, 10, 49);
+            color: white;
+            border: 1px solid lightgrey;
+            font-weight: bold;
+            font-size: 17px;
         }
+    }
+    .clear {
+        background: white;
+        border: 1px solid lightgrey;
+        width: 120px;
+        height: 40px;
+    }
+    .number {
+        font-weight: bold;
+        font-size: 17px;
+        background: white;
+        border: 1px solid lightgrey;
+        width: 40px;
+        height: 40px;
+    }
+    .zero {
+    font-weight: bold;
     }

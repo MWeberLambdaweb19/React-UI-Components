@@ -1,0 +1,15 @@
+.display {
+    width: 160px;
+    height: 50px;
+    border: 1px solid lightgrey;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    p {
+        font-weight: 300;
+        font-size: 25px;
+        padding-right: 5px;
+    }
+}
